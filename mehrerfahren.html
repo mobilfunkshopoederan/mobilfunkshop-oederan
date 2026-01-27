@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehr erfahren – Mobilfunkshop Oederan</title>
+  <meta name="description" content="Erfahren Sie mehr über den Mobilfunkshop Oederan, unsere Philosophie und unser Team." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: rgba(17,24,39,0.8);
+      border-radius: 1.2rem;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      margin-bottom: 2rem;
+    }
+
+    .card h3 {
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mobilfunkshop Oederan</h1>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="angebote.html">Angebote</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h2>Mehr erfahren</h2>
+      <p>
+        Lernen Sie den Mobilfunkshop Oederan kennen – unsere Philosophie, unser Team und unsere Werte.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Unser Ansatz</h3>
+      <p>
+        Persönlicher Service, Transparenz und kompetente Beratung stehen bei uns an erster Stelle.  
+        Wir möchten, dass Sie sich wohlfühlen und die besten Lösungen für Ihre Mobilfunkbedürfnisse finden.
+      </p>
+    </div>
+  </section>
+
+  <!-- Info Cards -->
+  <section class="features">
+    <div class="card feature">
+      <h3>Über uns</h3>
+      <p>
+        Der Mobilfunkshop Oederan – geführt von Marcel Kempe – bietet seit Jahren persönliche und kompetente Beratung direkt vor Ort in Oederan und unterstützt Kundinnen und Kunden zuverlässig bei Smartphones, Tarifen und Servicefragen.
+      </p>
+    </div>
+
+    <div class="card feature">
+      <h3>Unser Team</h3>
+      <p>
+        Ein engagiertes Team steht Ihnen jederzeit mit Rat und Tat zur Seite – sei es bei Fragen zu Smartphones, Tarifen oder Zubehör, bei der Einrichtung neuer Geräte, der Datenübertragung oder bei allen anderen Serviceanliegen. Wir nehmen uns Zeit, beraten persönlich und sorgen dafür, dass Sie Ihre Geräte optimal nutzen können.
+      </p>
+    </div>
+
+    <div class="card feature">
+      <h3>Unsere Werte</h3>
+      <p>
+       Fairness, Ehrlichkeit und Kundenzufriedenheit bilden die Grundlage unserer Arbeit. Wir legen Wert auf transparente Beratung, nehmen uns Zeit für individuelle Bedürfnisse und sorgen dafür, dass jede Kundin und jeder Kunde die passende Lösung findet – zuverlässig, verständlich und persönlich.      </p>
+    </div>
+
+    <div class="card feature">
+      <h3>Vertrauen & Sicherheit</h3>
+      <p>
+        Wir garantieren einen sicheren und verantwortungsvollen Umgang mit Ihren Daten sowie eine transparente Beratung ohne versteckte Kosten. Dabei informieren wir Sie klar über alle Preise, Konditionen und Möglichkeiten, damit Sie jederzeit fundierte Entscheidungen treffen können und sich bei uns gut aufgehoben fühlen.      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="impressum.html" style="color:var(--muted); margin-right:1rem;">Impressum</a>
+  <a href="datenschutz.html" style="color:var(--muted);">Datenschutz</a><br>
+  © 2026 · Mobilfunkshop Oederan
+</footer>
+
+</body>
+</html>

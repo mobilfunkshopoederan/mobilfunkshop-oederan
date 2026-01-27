@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angebote – Mobilfunkshop Oederan</title>
+  <meta name="description" content="Unsere aktuellen Angebote – Mobilfunkshop Oederan" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: rgba(17,24,39,0.8);
+      border-radius: 1.2rem;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.4rem;
+      border-radius: 0.7rem;
+      background: var(--accent);
+      color: #020617;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      margin-top: 0.8rem;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+    }
+
+    .features {
+      margin-top: 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature h3 {
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mobilfunkshop Oederan</h1>
+  <nav>
+      <a href="index.html">Start</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="angebote.html">Angebote</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h2>Aktuelle Angebote</h2>
+      <p>
+        Hier finden Sie eine Auswahl unserer Leistungen und Produkte.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Unsere Angebote auf einen Blick</h3>
+      <p style="margin-top:0.8rem; color: var(--muted);">
+       Unsere Angebote auf einen Blick – Smartphones, Tarife und Zubehör.
+      </p>
+    </div>
+  </section>
+
+  <!-- Angebote Grid -->
+  <section class="features">
+    <div class="card feature">
+      <img src="platzhalter1.jpg" alt="Angebot 1">
+      <h3>Samsung Galaxy A16</h3>
+      <p>Samsung Galaxy A16  modernes Design, zuverlässige Leistung und ein großes Display für den Alltag. Ideal für Surfen, Apps, Fotos und Streaming.</p>
+    </div>
+
+    <div class="card feature">
+      <img src="platzhalter2.jpg" alt="Angebot 2">
+      <h3>Samsung Galaxy A36</h3>
+      <p>Samsung Galaxy A36 starkes Design, flüssige Performance und ein brillantes Display. Ideal für Alltag, Entertainment und Social Media.</p>
+    </div>
+
+    <div class="card feature">
+      <img src="platzhalter3.jpg" alt="Angebot 3">
+      <h3>Tarife & Prepaid</h3>
+      <p><br>Tarife & Prepaid flexible Vertrags- und Prepaid-Lösungen, verständlich erklärt und passend zu Ihrem Nutzungsverhalten.</p>
+    </div>
+
+    <div class="card feature">
+      <img src="platzhalter4.jpg" alt="Angebot 4">
+      <h3>Service & Einrichtung</h3>
+      <p>Service & Einrichtung Hilfe bei Einrichtung, Datenübertragung, SIM-Karten und alltäglichen Smartphone-Fragen.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="impressum.html" style="color:var(--muted); margin-right:1rem;">Impressum</a>
+  <a href="datenschutz.html" style="color:var(--muted);">Datenschutz</a><br>
+  © 2026 · Mobilfunkshop Oederan
+</footer>
+
+</body>
+</html>

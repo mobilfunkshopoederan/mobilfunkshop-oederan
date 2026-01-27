@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leistungen – Mobilfunkshop Oederan</title>
+  <meta name="description" content="Übersicht der Leistungen des Mobilfunkshop Oederan" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background: rgba(17,24,39,0.8);
+      border-radius: 1.2rem;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .card h3 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mobilfunkshop Oederan</h1>
+  <nav>
+      <a href="index.html">Start</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="angebote.html">Angebote</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <h2>Unsere Leistungen</h2>
+      <p>
+        Persönlicher Service, verständliche Beratung und moderne Mobilfunklösungen.
+        Hier finden Sie einen Überblick über unsere Leistungen.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Beratung & Service</h3>
+      <p>
+        Individuelle Beratung direkt vor Ort: transparent, ehrlich und auf Ihre
+        Bedürfnisse abgestimmt. 
+      </p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="card feature">
+      <h3>Smartphone-Beratung</h3>
+      <p>Unterstützung bei der Auswahl aktueller Smartphones, passend zu Nutzung und Budget.</p>
+    </div>
+
+    <div class="card feature">
+      <h3>Tarifberatung</h3>
+      <p>Analyse und Empfehlung geeigneter Mobilfunk- und Datentarife.</p>
+    </div>
+
+    <div class="card feature">
+      <h3>Einrichtung & Datenübertragung</h3>
+      <p>Einrichtung neuer Geräte sowie Übertragung von Kontakten, Fotos und Apps.</p>
+    </div>
+
+    <div class="card feature">
+      <h3>Reparatur & Unterstützung</h3>
+      <p>Hilfe bei Softwareproblemen sowie Organisation von Reparaturen.</p>
+    </div>
+
+    <!-- Untere Reihe -->
+    <div class="card feature">
+      <h3>Zubehör</h3>
+      <p>Hüllen, Schutzgläser, Ladegeräte und weiteres Zubehör für Ihr Smartphone.</p>
+    </div>
+
+    <div class="card feature">
+      <h3>Persönlicher Ansprechpartner</h3>
+      <p>Direkter Kontakt vor Ort – keine Hotlines, keine Warteschleifen.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="impressum.html" style="color:var(--muted); margin-right:1rem;">Impressum</a>
+  <a href="datenschutz.html" style="color:var(--muted);">Datenschutz</a><br>
+  © 2026 · Mobilfunkshop Oederan
+</footer>
+
+</body>
+</html>
+

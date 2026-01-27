@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – Mobilfunkshop Oederan</title>
+  <meta name="description" content="Kontaktieren Sie den Mobilfunkshop Oederan in Oederan. Persönlicher Service und Beratung vor Ort." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: rgba(17,24,39,0.8);
+      border-radius: 1.2rem;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.4rem;
+      border-radius: 0.7rem;
+      background: var(--accent);
+      color: #020617;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mobilfunkshop Oederan</h1>
+  <nav>
+      <a href="index.html">Start</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="angebote.html">Angebote</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h2>Kontakt</h2>
+      <p>
+        Besuchen Sie uns direkt vor Ort in Oederan oder kontaktieren Sie uns telefonisch oder per E-Mail.  
+        Wir sind persönlich für Sie da.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Unsere Kontaktdaten</h3>
+      <p style="margin-top:0.8rem; color: var(--muted);">
+        Mobilfunkshop Oederan<br>
+        Marcel Kempe<br>
+        Große Kirchgasse 3<br>
+        09569 Oederan
+      </p>
+      <p style="margin-top:0.8rem; color: var(--muted);">
+        Telefon: 015257000715<br>
+        E-Mail: mobilfunkshop.oederan@gmx.de
+      </p>
+      <h3 style="margin-top:1.2rem;">Öffnungszeiten</h3>
+      <p style="color: var(--muted); font-size: 0.95rem; margin-top:0.4rem;">
+        Mo, Di, Do und Fr 10.00 bis 12.00 Uhr<br>und von 14:00 bis 17:00 Uhr <br>
+ Mittwoch 14:00 bis 17:00 Uhr<br>
+
+Samstag 8.30 bis 11.00 Uhr
+      </p>
+      <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Mobilfunkshop+Oederan+Große+Kirchgasse+3+09569+Oederan" target="_blank">
+        Route mit Google Maps
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="impressum.html" style="color:var(--muted); margin-right:1rem;">Impressum</a>
+  <a href="datenschutz.html" style="color:var(--muted);">Datenschutz</a><br>
+  © 2026 · Mobilfunkshop Oederan
+</footer>
+
+</body>
+</html>
