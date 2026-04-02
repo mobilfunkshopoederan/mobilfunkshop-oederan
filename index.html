@@ -176,10 +176,29 @@
       font-size: 0.85rem;
     }
 
+    /* 🔥 FIX FÜR MOBILE HEADER */
     @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem 1.2rem;
+        width: 100%;
+      }
+
+      nav a {
+        margin-left: 0;
+      }
+
       .hero {
         grid-template-columns: 1fr;
       }
+
       .hero h2 {
         font-size: 2.2rem;
       }
@@ -244,7 +263,6 @@
   </button>
 </section>
 
-<!-- POPUP -->
 <div class="overlay" id="popup">
   <div class="popup">
     <h3>Externer Dienst</h3>
