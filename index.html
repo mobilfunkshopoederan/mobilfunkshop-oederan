@@ -35,7 +35,7 @@
     }
 
     header h1 {
-      font-size: 2rem;          
+      font-size: 2rem;
       letter-spacing: 0.5px;
       color: var(--text);
       font-weight: 600;
@@ -90,6 +90,8 @@
       color: #020617;
       font-weight: 600;
       text-decoration: none;
+      border: none;
+      cursor: pointer;
       transition: transform 0.15s, box-shadow 0.15s;
     }
 
@@ -122,10 +124,49 @@
       font-size: 0.95rem;
     }
 
-    
     .features a {
       text-decoration: none;
       color: inherit;
+    }
+
+    /* POPUP */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .popup {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 1.2rem;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .popup h3 {
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .popup p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .popup-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
     }
 
     footer {
@@ -147,64 +188,92 @@
 </head>
 <body>
 
-  <header>
-    <h1>Mobilfunkshop Oederan</h1>
-    <nav>
-      <a href="index.html">Start</a>
-      <a href="leistungen.html">Leistungen</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="angebote.html">Angebote</a>
-    </nav>
-  </header>
+<header>
+  <h1>Mobilfunkshop Oederan</h1>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="angebote.html">Angebote</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero">
-      <div>
-        <h2>Dein Mobilfunkshop in Oederan</h2>
-        <p>
-          Verträge, Smartphones und persönlicher Service – direkt vor Ort in Oederan.
-          Wir finden den passenden Tarif für dich.
-        </p>
-        
-        <a class="btn" href="mehrerfahren.html">Mehr erfahren</a>
-      </div>
-      <div class="card">
-        <h3>Alles rund um Mobilfunk</h3>
-        <p style="margin-top: 0.8rem; color: var(--muted)">
-          Smartphones, Tarife und Zubehör – mit kompetenter, fairer und verständlicher Beratung, die persönlich auf deine Wünsche und Bedürfnisse eingeht.</p>
-      </div>
-    </section>
+<main>
+  <section class="hero">
+    <div>
+      <h2>Dein Mobilfunkshop in Oederan</h2>
+      <p>
+        Verträge, Smartphones und persönlicher Service – direkt vor Ort in Oederan.
+        Wir finden den passenden Tarif für dich.
+      </p>
+      
+      <a class="btn" href="mehrerfahren.html">Mehr erfahren</a>
+    </div>
 
-    <section id="features" class="features">
-    
-      <a href="leistungen.html#features" class="card feature">
-        <h3>Smartphones</h3>
-        <p>Aktuelle Modelle von Samysung, Apple und mehr, mit oder ohne Vertrag.</p>
-      </a>
-      <a href="leistungen.html#features" class="card feature">
-        <h3>Tarife</h3>
-        <p>Allnet-, Daten- und Handytarife, wir finden den besten für dich.</p>
-      </a>
-      <a href="leistungen.html#features" class="card feature">
-        <h3>Reparaturen</h3>
-        <p>Display, Akku und Software, schnell und zuverlässig.</p>
-      </a>
-      <a href="leistungen.html#features" class="card feature">
-        <h3>Service & Beratung</h3>
-        <p>Einrichtung, Datenübertragung und persönliche Hilfe.</p>
-      </a>
-    </section>
-  </main>
-
-  <section style="text-align:center; padding:3rem 2rem;">
-    <a class="btn"
-       href="https://www.google.com/maps/dir/?api=1&destination=Mobilfunkshop+Oederan+Große+Kirchgasse+3+09569+Oederan"
-       target="_blank">
-      Wie kommst du zu uns?
-    </a>
+    <div class="card">
+      <h3>Alles rund um Mobilfunk</h3>
+      <p style="margin-top: 0.8rem; color: var(--muted)">
+        Smartphones, Tarife und Zubehör – mit kompetenter, fairer und verständlicher Beratung.
+      </p>
+    </div>
   </section>
 
-  <footer>
+  <section id="features" class="features">
+    <a href="leistungen.html#features" class="card feature">
+      <h3>Smartphones</h3>
+      <p>Aktuelle Modelle von Samsung, Apple und mehr. (mit oder ohne Vertrag)</p>
+    </a>
+    <a href="leistungen.html#features" class="card feature">
+      <h3>Tarife</h3>
+      <p>Allnet-, Daten- und Handytarife, wir finden den besten für dich.</p>
+    </a>
+    <a href="leistungen.html#features" class="card feature">
+      <h3>Reparaturen</h3>
+      <p>Display, Akku und Software, schnell und zuverlässig.</p>
+    </a>
+    <a href="leistungen.html#features" class="card feature">
+      <h3>Service & Beratung</h3>
+      <p>Einrichtung, Datenübertragung und Persönliche Hilfe.</p>
+    </a>
+  </section>
+</main>
+
+<section style="text-align:center; padding:3rem 2rem;">
+  <button class="btn" onclick="openPopup()">
+    Wie kommst du zu uns?
+  </button>
+</section>
+
+<!-- POPUP -->
+<div class="overlay" id="popup">
+  <div class="popup">
+    <h3>Externer Dienst</h3>
+    <p>
+      Sie verlassen unsere Website und werden zu Google Maps weitergeleitet.
+      Dabei können personenbezogene Daten (z. B. Ihre IP-Adresse) an Google übertragen werden.
+    </p>
+    <div class="popup-buttons">
+      <button class="btn" onclick="goToMaps()">Weiter</button>
+      <button class="btn" onclick="closePopup()">Abbrechen</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openPopup() {
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+function goToMaps() {
+  window.open("https://www.google.com/maps/dir/?api=1&destination=Mobilfunkshop+Oederan+Große+Kirchgasse+3+09569+Oederan", "_blank");
+}
+</script>
+
+<footer>
   <div style="margin-bottom:0.8rem;">
     <a href="impressum.html" style="color:var(--muted); margin-right:1rem;">Impressum</a>
     <a href="datenschutz.html" style="color:var(--muted);">Datenschutz</a>
@@ -214,4 +283,3 @@
 
 </body>
 </html>
-
