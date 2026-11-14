@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -104,8 +105,32 @@
       box-shadow: 0 10px 25px rgba(56,189,248,0.3);
     }
 
+    /* Kategorieüberschriften */
+    .category {
+      margin-top: 4rem;
+    }
+
+    .category-title {
+      font-size: 2rem;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 2px solid rgba(56,189,248,0.35);
+    }
+
+    .subcategory-title {
+      font-size: 1.35rem;
+      color: var(--accent);
+      margin: 2rem 0 1.5rem;
+    }
+
+    .category-description {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
     .features {
-      margin-top: 5rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 2rem;
@@ -132,68 +157,206 @@
       .hero {
         grid-template-columns: 1fr;
       }
+
       .hero h2 {
         font-size: 2.2rem;
       }
     }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+      }
+
+      nav a {
+        margin-left: 0;
+      }
+
+      .category-title {
+        font-size: 1.7rem;
+      }
+    }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>Mobilfunkshop Oederan</h1>
   <nav>
-      <a href="index.html">Start</a>
-      <a href="leistungen.html">Leistungen</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="angebote.html">Angebote</a>
+    <a href="index.html">Start</a>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="angebote.html">Angebote</a>
   </nav>
 </header>
 
 <main>
+
   <!-- Hero Section -->
   <section class="hero">
     <div>
       <h2>Aktuelle Angebote</h2>
       <p>
-        Hier finden Sie eine Auswahl unserer Leistungen und Produkte.
+        Entdecken Sie unsere aktuellen Smartphone-Angebote,
+        Dienstleistungen und attraktiven Vertragsmöglichkeiten.
       </p>
     </div>
+
     <div class="card">
       <h3>Unsere Angebote auf einen Blick</h3>
       <p style="margin-top:0.8rem; color: var(--muted);">
-       Unsere Angebote auf einen Blick – Smartphones, Tarife und Zubehör. <br> *Bilder können KI - Generiert sein.
+        Smartphones, Tarife und Zubehör.<br>
+        *Bilder können KI-generiert sein.
       </p>
     </div>
   </section>
 
-  <!-- Angebote Grid -->
-  <section class="features">
-    <div class="card feature">
-      <img src="galaxya17.jpg" alt="Angebot 1">
-      <h3>Samsung Galaxy A17</h3>
-      <p>Samsung Galaxy A17 modernes Design, starke Leistung und ein brillantes Display für den Alltag. Ideal für Surfen, Apps, Fotos und Streaming.</p>
+
+  <!-- KATEGORIE: HANDYS -->
+  <section class="category">
+
+    <h2 class="category-title">Handys</h2>
+    <p class="category-description">
+      Entdecken Sie aktuelle Smartphones führender Hersteller.
+    </p>
+
+    <!-- Samsung -->
+    <h3 class="subcategory-title">Samsung</h3>
+
+    <div class="features">
+
+      <div class="card feature">
+        <img src="S26Samsung.png" alt="Samsung Galaxy S26">
+        <h3>Samsung Galaxy S26</h3>
+        <p>
+  Modernes Design, leistungsstarke Technik und ein brillantes Display.
+  Das Samsung Galaxy S26 überzeugt mit starken Kameras, flüssiger Performance
+  und intelligenten Funktionen für den Alltag.
+</p>
+      </div>
+
+      <div class="card feature">
+        <img src="S26UltraSamsung.jpg" alt="Samsung Galaxy S26 Ultra">
+        <h3>Samsung Galaxy S26 Ultra</h3>
+        <p>
+  Premium-Design, beeindruckende Leistung und ein großzügiges Dynamic AMOLED Display.
+  Das Samsung Galaxy S26 Ultra bietet professionelle Kameratechnik,
+  innovative Galaxy AI-Funktionen und ein erstklassiges Smartphone-Erlebnis.
+</p>
+      </div>
+
+       <div class="card feature">
+        <img src="SamsungA57.png" alt="Samsung Galaxy A57">
+        <h3>Samsung Galaxy A57</h3>
+       <p>
+  Modernes Design, starke Leistung und ein brillantes Display.
+  Das Samsung Galaxy A57 überzeugt mit einer leistungsfähigen Kamera,
+  flüssiger Bedienung und praktischen Funktionen für den Alltag.
+</p>
+      </div>
+
     </div>
 
-    <div class="card feature">
-      <img src="Galaxy_a36.png" alt="Angebot 2">
-      <h3>Samsung Galaxy A36</h3>
-      <p>Samsung Galaxy A36 starkes Design, flüssige Performance und ein brillantes Display. Ideal für Alltag, Entertainment und Social Media.</p>
+    <!-- Apple -->
+    <h3 class="subcategory-title">Apple</h3>
+
+    <div class="features">
+
+      
+       <div class="card feature">
+        <img src="Iphone18Pro.png" alt="Iphone 18 Pro">
+        <h3>Iphone 18 Pro</h3>
+       <p>
+  Elegantes Design, beeindruckende Leistung und innovative Kameratechnik.
+  Das iPhone 18 Pro bietet ein brillantes Display, leistungsstarke Funktionen
+  und ein erstklassiges Nutzererlebnis für höchste Ansprüche.
+</p>
+      </div>
+
+        <div class="card feature">
+        <img src="Iphone18ProMax.png" alt="Iphone 18 Pro Max">
+        <h3>Iphone 18 Pro Max</h3>
+       <p>
+  Großes Display, elegantes Design und beeindruckende Leistung.
+  Das iPhone 18 Pro Max bietet innovative Kameratechnik, leistungsstarke
+  Funktionen und ein erstklassiges Nutzererlebnis – ideal für alle,
+  die Wert auf ein besonders großes und hochwertiges Smartphone legen.
+</p>
+      </div>
+
     </div>
 
-    <div class="card feature">
-      <img src="Jetzt_Vergleichen!.png" alt="Angebot 3">
-      <h3>Tarife & Prepaid</h3>
-      <p><br>Tarife & Prepaid flexible Vertrags- und Prepaid-Lösungen, verständlich erklärt und passend zu Ihrem Nutzungsverhalten.</p>
-    </div>
-
-    <div class="card feature">
-      <img src="service.png" alt="Angebot 4">
-      <h3>Service & Einrichtung</h3>
-      <p>Service & Einrichtung Hilfe bei Einrichtung, Datenübertragung, SIM-Karten und alltäglichen Smartphone-Fragen.</p>
-    </div>
   </section>
+
+
+  <!-- KATEGORIE: DIENSTLEISTUNGEN -->
+  <section class="category">
+
+    <h2 class="category-title">Dienstleistungen</h2>
+    <p class="category-description">
+      Persönlicher Service und kompetente Unterstützung rund um Ihr Smartphone.
+    </p>
+
+    <div class="features">
+
+      <div class="card feature">
+        <img src="ServiceundEinrichtung.png" alt="Service und Einrichtung">
+        <h3>Service & Einrichtung</h3>
+        <p>
+          Hilfe bei Einrichtung, Datenübertragung, SIM-Karten
+          und alltäglichen Smartphone-Fragen.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- KATEGORIE: VERTRAGSANGEBOTE -->
+  <section class="category">
+
+    <h2 class="category-title">Vertragsangebote</h2>
+    <p class="category-description">
+      Flexible Mobilfunklösungen für unterschiedliche Bedürfnisse.
+    </p>
+
+    <div class="features">
+
+      <div class="card feature">
+        <img src="Mobile Tarife mit fünf Anbietern.png" alt="Tarife und Prepaid">
+        <h3>Tarife & Prepaid</h3>
+        <p>
+          Flexible Vertrags- und Prepaid-Lösungen,
+          verständlich erklärt und passend zu Ihrem Nutzungsverhalten.
+        </p>
+      </div>
+
+      <div class="card feature">
+  <img src="Jetztauch1&1Partner.png" alt="Jetzt auch 1&1 Partner!">
+  <h3>Jetzt auch 1&1 Partner!</h3>
+  <p>
+  Jetzt auch 1&1 Partner! Entdecken Sie attraktive Mobilfunkangebote,
+  flexible Tarife und passende Vertragslösungen von 1&1.
+  Wir beraten Sie persönlich und helfen Ihnen dabei, das passende Angebot zu finden.
+</p>
+</div>
+      
+    </div>
+
+  </section>
+
 </main>
+
 
 <footer>
   <a href="impressum.html" style="color:var(--muted); margin-right:1rem;">Impressum</a>
