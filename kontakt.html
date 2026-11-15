@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -5,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontakt – Mobilfunkshop Oederan</title>
   <meta name="description" content="Kontaktieren Sie den Mobilfunkshop Oederan in Oederan. Persönlicher Service und Beratung vor Ort." />
+
   <style>
     :root {
       --bg: #0f172a;
@@ -96,18 +98,62 @@
       box-shadow: 0 10px 25px rgba(56,189,248,0.3);
     }
 
-    /* POPUP */
+    /* INSTAGRAM-BEREICH */
+
+    .instagram-section {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .instagram-section h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .instagram-image {
+      display: block;
+      width: 100%;
+      max-width: 650px;
+      max-height: 600px;
+      object-fit: contain;
+      margin: 0 auto 1.2rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
+
+    .instagram-image:hover {
+      transform: scale(1.015);
+      box-shadow: 0 20px 40px rgba(56,189,248,0.15);
+    }
+
+    .instagram-link {
+      color: var(--accent);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .instagram-link:hover {
+      text-decoration: underline;
+    }
+
+    /* POPUP-FENSTER */
+
     .overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.8);
       display: none;
       align-items: center;
       justify-content: center;
       z-index: 999;
+      padding: 1rem;
     }
 
     .popup {
@@ -136,6 +182,45 @@
       justify-content: center;
     }
 
+    /* INSTAGRAM-BILDFENSTER */
+
+    .image-popup {
+      position: relative;
+      background: var(--card);
+      padding: 1rem;
+      border-radius: 1.2rem;
+      max-width: 850px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    }
+
+    .image-popup img {
+      display: block;
+      max-width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      margin: 0 auto;
+      border-radius: 0.6rem;
+    }
+
+    .close-image-popup {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.8rem;
+      background: rgba(2,6,23,0.85);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 2;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -147,36 +232,72 @@
       .hero {
         grid-template-columns: 1fr;
       }
+
       .hero h2 {
         font-size: 2.2rem;
       }
     }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+      }
+
+      nav a {
+        margin: 0;
+      }
+
+      main {
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      .card {
+        padding: 1.4rem;
+      }
+
+      .popup-buttons {
+        flex-wrap: wrap;
+      }
+    }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>Mobilfunkshop Oederan</h1>
   <nav>
-      <a href="index.html">Start</a>
-      <a href="leistungen.html">Leistungen</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="angebote.html">Angebote</a>
+    <a href="index.html">Start</a>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="angebote.html">Angebote</a>
   </nav>
 </header>
 
 <main>
+
   <section class="hero">
     <div>
       <h2>Kontakt</h2>
       <p>
-        Besuchen Sie uns direkt vor Ort in Oederan oder kontaktieren Sie uns telefonisch oder per E-Mail.  
+        Besuchen Sie uns direkt vor Ort in Oederan oder kontaktieren Sie uns telefonisch oder per E-Mail.
         Wir sind persönlich für Sie da.
       </p>
     </div>
 
     <div class="card">
       <h3>Unsere Kontaktdaten</h3>
+
       <p style="margin-top:0.8rem; color: var(--muted);">
         Mobilfunkshop Oederan<br>
         Marcel Kempe<br>
@@ -190,36 +311,119 @@
       </p>
 
       <h3 style="margin-top:1.2rem;">Öffnungszeiten</h3>
+
       <p style="color: var(--muted); font-size: 0.95rem; margin-top:0.4rem;">
-        Mo, Di, Do und Fr 10.00 bis 12.00 Uhr<br>und von 14:00 bis 17:00 Uhr <br>
+        Mo, Di, Do und Fr 10.00 bis 12.00 Uhr<br>
+        und von 14:00 bis 17:00 Uhr<br>
         Mittwoch 14:00 bis 17:00 Uhr<br>
         Samstag 8.30 bis 11.00 Uhr
       </p>
 
-      <!-- BUTTON -->
       <button class="btn" onclick="openPopup()">
         Route mit Google Maps
       </button>
     </div>
   </section>
+
+  <!-- INSTAGRAM-BEREICH -->
+
+  <section class="instagram-section">
+
+    <h3>Besuchen Sie uns auch auf Instagram</h3>
+
+    <img
+      src="Mobilfunkshop Oederan auf Instagram.png"
+      alt="Instagram-Werbung des Mobilfunkshops Oederan"
+      class="instagram-image"
+      onclick="openImagePopup()"
+    >
+
+    <a
+      class="instagram-link"
+      href="#"
+      onclick="event.preventDefault(); openInstagramPopup();"
+    >
+      @mobilfunkshop.oederan auf Instagram
+    </a>
+
+  </section>
+
 </main>
 
-<!-- POPUP -->
-<div class="overlay" id="popup">
+<!-- GOOGLE MAPS POPUP -->
+
+<div
+  class="overlay"
+  id="popup"
+  onclick="if(event.target === this) closePopup()"
+>
   <div class="popup">
+
     <h3>Externer Dienst</h3>
+
     <p>
-      Sie verlassen unsere Website und werden zu Google Maps weitergeleitet.  
+      Sie verlassen unsere Website und werden zu Google Maps weitergeleitet.
       Dabei können personenbezogene Daten (z. B. Ihre IP-Adresse) an Google übertragen werden.
     </p>
+
     <div class="popup-buttons">
       <button class="btn" onclick="goToMaps()">Weiter</button>
       <button class="btn" onclick="closePopup()">Abbrechen</button>
     </div>
+
+  </div>
+</div>
+
+<!-- INSTAGRAM-BILDFENSTER -->
+
+<div
+  class="overlay"
+  id="imagePopup"
+  onclick="if(event.target === this) closeImagePopup()"
+>
+  <div class="image-popup">
+
+    <button
+      class="close-image-popup"
+      onclick="closeImagePopup()"
+      aria-label="Fenster schließen"
+    >×</button>
+
+    <img
+      src="Mobilfunkshop Oederan auf Instagram.png"
+      alt="Instagram-Werbung des Mobilfunkshops Oederan"
+    >
+
+  </div>
+</div>
+
+<!-- INSTAGRAM EXTERNER DIENST POPUP -->
+
+<div
+  class="overlay"
+  id="instagramPopup"
+  onclick="if(event.target === this) closeInstagramPopup()"
+>
+  <div class="popup">
+
+    <h3>Externer Dienst</h3>
+
+    <p>
+      Sie verlassen unsere Website und werden zu Instagram weitergeleitet.
+      Dabei können personenbezogene Daten (z. B. Ihre IP-Adresse)
+      an Meta Platforms übertragen werden.
+    </p>
+
+    <div class="popup-buttons">
+      <button class="btn" onclick="goToInstagram()">Weiter</button>
+      <button class="btn" onclick="closeInstagramPopup()">Abbrechen</button>
+    </div>
+
   </div>
 </div>
 
 <script>
+
 function openPopup() {
   document.getElementById("popup").style.display = "flex";
 }
@@ -229,8 +433,49 @@ function closePopup() {
 }
 
 function goToMaps() {
-  window.open("https://www.google.com/maps/dir/?api=1&destination=Mobilfunkshop+Oederan+Große+Kirchgasse+3+09569+Oederan", "_blank");
+  window.open(
+    "https://www.google.com/maps/dir/?api=1&destination=Mobilfunkshop+Oederan+Große+Kirchgasse+3+09569+Oederan",
+    "_blank",
+    "noopener,noreferrer"
+  );
+
+  closePopup();
 }
+
+function openImagePopup() {
+  document.getElementById("imagePopup").style.display = "flex";
+}
+
+function closeImagePopup() {
+  document.getElementById("imagePopup").style.display = "none";
+}
+
+function openInstagramPopup() {
+  document.getElementById("instagramPopup").style.display = "flex";
+}
+
+function closeInstagramPopup() {
+  document.getElementById("instagramPopup").style.display = "none";
+}
+
+function goToInstagram() {
+  window.open(
+    "https://www.instagram.com/mobilfunkshop.oederan/",
+    "_blank",
+    "noopener,noreferrer"
+  );
+
+  closeInstagramPopup();
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closePopup();
+    closeImagePopup();
+    closeInstagramPopup();
+  }
+});
+
 </script>
 
 <footer>
